@@ -14,7 +14,7 @@ FS.Store.FileSystem = function(name, options) {
   // Provide a default FS directory one level up from the build/bundle directory
   var pathname = options.path;
   if (!pathname && __meteor_bootstrap__ && __meteor_bootstrap__.serverDir) {
-    pathname = path.join(__meteor_bootstrap__.serverDir, '../../../cfs/files/' + name);
+    pathname = path.join(__meteor_bootstrap__.serverDir, './cfs/files/' + name);
   }
 
   if (!pathname)
